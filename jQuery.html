@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>JQuery</title>
+</head>
+
+<script>
+    // When the page is ready it will do the function.
+    $(document).ready(function () {
+        // Function will append a body element and everything included in it to the html file.
+        $("html").append(
+            "<body>\
+                <div id='container'>\
+                    <div id='inner'>\
+                        <h1>Basic jQuery</h1>\
+                        <p id='1'>Paragraph1</p>\
+                        <p id='2'>Paragraph2</p>\
+                        <p id='3'>Paragraph3</p>\
+                    <div/>\
+                </div>\
+            <body>"
+        );
+
+        // jQuery will change paragraph 2 text to red.
+        $("#2").css({
+            "color": "red"
+        });
+
+        // jQuery will make the h1 text hide when paragraph 3 is clicked.
+        $("#3").click(function () {
+            $('h1').hide();
+        });
+    });
+</script>
+
+</html>
